@@ -1,0 +1,3 @@
+[submodule "python-mysql-backup"]
+	path = python-mysql-backup
+	url = https://github.com/tecrahul/python-mysql-backup
