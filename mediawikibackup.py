@@ -16,7 +16,7 @@ if __name__ == "__main__":
     with open("./settings", "rb") as r:
         dict = pickle.load(r)
         secret = dict["SECRET"]
-        WIKI_PATH = dict["WIKI_PATH"]
+        WIKI_PATH = dict["WIKI_PATH"]   
     copy_tree(WIKI_PATH, backuppath + "/wiki")
     dbx = dropbox.Dropbox(secret)
     make_tarfile("./backup/" + datetime+ ".tar", backuppath)
