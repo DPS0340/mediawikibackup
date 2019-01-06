@@ -13,10 +13,10 @@ if __name__ == "__main__":
     sys.path.insert(0, './python-mysql-backup')
     import dbbackup
     backuppath, datetime = dbbackup.main()
-    with open("secret", "r") as r:
-        secret = r.readline()
     with open("./settings", "rb") as r:
-        WIKI_PATH = pickle.load(r)["WIKI_PATH"]
+        dict = pickle.load(r)
+        secret = dict["SECRET"]
+        WIKI_PATH = dict["WIKI_PATH"]
     copy_tree(WIKI_PATH, backuppath + "/wiki")
     dbx = dropbox.Dropbox(secret)
     make_tarfile("./backup/" + datetime+ ".tar", backuppath)
