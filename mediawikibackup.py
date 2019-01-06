@@ -11,8 +11,7 @@ def make_tarfile(output_filename, source_dir):
         tar.add(source_dir, arcname=os.path.basename(source_dir))
 
 if __name__ == "__main__":
-    sys.path.insert(0, './python-mysql-backup')
-    import dbbackup
+    from mysqlbackup import dbbackup
     backuppath, datetime = dbbackup.main()
     with open("./settings", "rb") as r:
         dict = pickle.load(r)
