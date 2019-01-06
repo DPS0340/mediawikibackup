@@ -1,5 +1,7 @@
 # mediawikibackup
 
+pip install dropbox
+
 mediawiki backup script using python and dropbox
 
 git clone --recurse-submodules https://github.com/DPS0340/mediawikibackup
