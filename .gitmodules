@@ -1,0 +1,3 @@
+[submodule "mysqlbackup"]
+	path = mysqlbackup
+	url = https://github.com/DPS0340/mysqlbackup
