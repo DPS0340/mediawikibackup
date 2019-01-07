@@ -13,7 +13,7 @@ def make_tarfile(output_filename, source_dir):
 if __name__ == "__main__":
     from mysqlbackup import dbbackup
     backuppath, datetime = dbbackup.main()
-    with open("./settings", "rb") as r:
+    with open(os.path.dirname(os.path.realpath(__file__)) + "/settings", "rb") as r:
         dict = pickle.load(r)
         secret = dict["SECRET"]
         WIKI_PATH = dict["WIKI_PATH"]
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     copy_tree(WIKI_PATH, backuppath + "/wiki")
     copyfile(nginx, backuppath + "/nginx")
     dbx = dropbox.Dropbox(secret)
-    make_tarfile("./backup/" + datetime+ ".tar", backuppath)
-    with open("./backup/" + datetime+ ".tar", "rb") as f:
+    make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar", backuppath)
+    with open(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar", "rb") as f:
         dbx.files_upload(f.read(), "/" + datetime + ".tar", mute=True)
     print("backup to dropbox complete!")
