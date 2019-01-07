@@ -10,6 +10,6 @@ run setting.py to setting
 
 then run mediawikibackup.py
 
-## using crontab
+also, you can use crontab.
 
-```crontab -e```
+set time and just write path of mediawikibackup.py.
