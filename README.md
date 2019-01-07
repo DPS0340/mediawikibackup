@@ -12,4 +12,6 @@ then run mediawikibackup.py
 
 also, you can use crontab.
 
+```chmod a+x mediawikibackup.py```
+
 set time and just write path of mediawikibackup.py.
