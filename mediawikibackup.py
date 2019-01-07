@@ -14,6 +14,7 @@ def make_tarfile(output_filename, source_dir):
 if __name__ == "__main__":
     from mysqlbackup import dbbackup
     backuppath, datetime = dbbackup.main()
+    print("backup to dropbox...")
     with open(os.path.dirname(os.path.realpath(__file__)) + "/settings", "rb") as r:
         dict = pickle.load(r)
         secret = dict["SECRET"]
