@@ -18,5 +18,5 @@ if __name__ == "__main__":
         "DB_NAME":DB_NAME,
         "WIKI_PATH":WIKI_PATH
     }
-    with open("./settings", "wb") as w:
+    with open(os.path.dirname(os.path.realpath(__file__)) + "/settings", "wb") as w:
         pickle.dump(dump, w)
