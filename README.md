@@ -1,6 +1,8 @@
 # mediawikibackup
 
-pip install dropbox
+dependency is only dropbox.
+
+```pip install dropbox```
 
 mediawiki backup script using python and dropbox
 
