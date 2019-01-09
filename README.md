@@ -1,6 +1,6 @@
 # mediawikibackup
 
-dependency is only dropbox.
+dependency is only a dropbox APi v2.
 
 ```pip install dropbox```
 
