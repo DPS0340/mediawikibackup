@@ -16,4 +16,4 @@ to use crontab, first type this:
 
 ```chmod a+x mediawikibackup.py```
 
-set time and just write path of mediawikibackup.py in crontab.
+set frequency and just write path of mediawikibackup.py in crontab.
