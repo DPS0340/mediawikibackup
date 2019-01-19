@@ -2,7 +2,7 @@
 
 dependency is only a python SDK of the dropbox APi v2.
 
-```pip install dropbox```
+```pip3 install dropbox```
 
 git clone --recurse-submodules https://github.com/DPS0340/mediawikibackup
 
