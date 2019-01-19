@@ -1,6 +1,6 @@
 # mediawikibackup
 
-dependency:
+dependencies:
 
 google cloud storage api
 
