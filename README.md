@@ -1,6 +1,11 @@
 # mediawikibackup
 
-dependency is only a google cloud storage api.
+dependency:
+google cloud storage api
+google cloud sdk
+
+
+```https://googleapis.github.io/google-cloud-python/latest/core/auth.html```
 
 ```pip install google-cloud-storage```
 
