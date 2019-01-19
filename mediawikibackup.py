@@ -16,7 +16,7 @@ if __name__ == "__main__":
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.dirname(os.path.realpath(__file__)) + '/auth.json'
     storage_client = google.cloud.storage.Client()
     backuppath, datetime = dbbackup.main()
-    print("backup to dropbox...")
+    print("backup to google...")
     with open(os.path.dirname(os.path.realpath(__file__)) + "/settings", "rb") as r:
         dict = pickle.load(r)
         secret = dict["SECRET"]
@@ -30,4 +30,4 @@ if __name__ == "__main__":
     blob = bucket.blob(datetime+ ".tar")
     make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime + ".tar", backuppath)
     blob.upload_from_filename(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime + ".tar")
-    print("backup to dropbox complete!")
+    print("backup to google complete!")
