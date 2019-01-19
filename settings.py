@@ -4,7 +4,7 @@ import pickle
 
 if __name__ == "__main__":
     SECRET = input("please type bucket id.")
-    NGINX = input("please type nginx site setting file in site-available.")
+    NGINX = input("please type nginx site setting file in sites-available.")
     DB_HOST = input("please type DB_HOST.")
     DB_USER = input("please type DB_USER.")
     DB_USER_PASSWORD = input("please type DB_USER_PASSWORD.")
