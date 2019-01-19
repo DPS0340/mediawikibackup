@@ -24,7 +24,7 @@ if __name__ == "__main__":
     copy_tree(WIKI_PATH, backuppath + "/wiki")
     copyfile(nginx, backuppath + "/nginx")
     bucket = storage_client.get_bucket(secret)
-    blob = bucket.blob(os.path.basename(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar"))
+    blob = bucket.blob(datetime+ ".tar")
     make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar", backuppath)
     blob.upload_from_filename(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar")
     print("backup to dropbox complete!")
