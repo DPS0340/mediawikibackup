@@ -3,7 +3,7 @@ import pickle
 
 
 if __name__ == "__main__":
-    SECRET = input("please type dropbox token.")
+    SECRET = input("please type bucket id.")
     NGINX = input("please type nginx site setting file in site-available.")
     DB_HOST = input("please type DB_HOST.")
     DB_USER = input("please type DB_USER.")
