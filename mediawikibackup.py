@@ -21,8 +21,10 @@ if __name__ == "__main__":
         secret = dict["SECRET"]
         WIKI_PATH = dict["WIKI_PATH"]
         nginx = dict["NGINX"]
+        log = dict["LOG"]
     copy_tree(WIKI_PATH, backuppath + "/wiki")
     copyfile(nginx, backuppath + "/nginx")
+    copyfile(log, backuppath + "/log")
     bucket = storage_client.get_bucket(secret)
     blob = bucket.blob(datetime+ ".tar")
     make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar", backuppath)
