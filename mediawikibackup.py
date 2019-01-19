@@ -13,6 +13,7 @@ def make_tarfile(output_filename, source_dir):
         tar.add(source_dir, arcname=os.path.basename(source_dir))
 
 if __name__ == "__main__":
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.dirname(os.path.realpath(__file__)) + '/auth.json'
     storage_client = google.cloud.storage.Client()
     backuppath, datetime = dbbackup.main()
     print("backup to dropbox...")
