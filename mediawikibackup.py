@@ -25,7 +25,7 @@ if __name__ == "__main__":
     copyfile(nginx, backuppath + "/nginx")
     copyfile(log, backuppath + "/log")
     dbx = dropbox.Dropbox(secret)
-    make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar", backuppath)
-    with open(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar", "rb") as f:
+    make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime + ".tar", backuppath)
+    with open(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime + ".tar", "rb") as f:
         dbx.files_upload(f.read(), "/" + datetime + ".tar", mute=True)
     print("backup to dropbox complete!")
