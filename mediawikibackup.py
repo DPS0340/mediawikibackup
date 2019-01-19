@@ -27,6 +27,6 @@ if __name__ == "__main__":
     copyfile(log, backuppath + "/log")
     bucket = storage_client.get_bucket(secret)
     blob = bucket.blob(datetime+ ".tar")
-    make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar", backuppath)
-    blob.upload_from_filename(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime+ ".tar")
+    make_tarfile(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime + ".tar", backuppath)
+    blob.upload_from_filename(os.path.dirname(os.path.realpath(__file__)) + "/backup/" + datetime + ".tar")
     print("backup to dropbox complete!")
