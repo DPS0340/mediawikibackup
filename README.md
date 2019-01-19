@@ -6,9 +6,9 @@ dependency is only a google cloud storage api.
 
 git clone --recurse-submodules https://github.com/DPS0340/mediawikibackup
 
-run setting.py to make setting file
+```python3 setting.py``` to make setting file
 
-then run mediawikibackup.py
+then ```python3 mediawikibackup.py```
 
 also, you can use crontab.
 
