@@ -1,8 +1,8 @@
 # mediawikibackup
 
-dependency is only a python SDK of the dropbox APi v2.
+dependency is only a google cloud storage api.
 
-```pip install dropbox```
+```pip install google-cloud-storage```
 
 git clone --recurse-submodules https://github.com/DPS0340/mediawikibackup
 
