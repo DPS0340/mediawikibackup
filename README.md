@@ -6,7 +6,7 @@ dependency is only a python SDK of the dropbox APi v2.
 
 git clone --recurse-submodules https://github.com/Shortwiki/mediawikibackup
 
-```python3 setting.py``` to make setting file
+```python3 settings.py``` to make setting file
 
 then ```python3 mediawikibackup.py```
 
