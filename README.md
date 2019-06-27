@@ -19,7 +19,7 @@ then ```python3 mediawikibackup.py```
 
 also, you can use crontab.
 
-to use crontab, first type this:
+to use crontab, first type this in your file path:
 
 ```chmod a+x mediawikibackup.py```
 
