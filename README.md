@@ -11,7 +11,7 @@ google cloud sdk
 
 ```pip3 install google-cloud-storage```
 
-git clone --recurse-submodules https://github.com/Shortwiki/mediawikibackup
+```git clone --recurse-submodules https://github.com/DPS0340/mediawikibackup```
 
 ```python3 settings.py``` to make setting file
 
