@@ -1,5 +1,8 @@
 # mediawikibackup
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+
 dependency is only a python SDK of the dropbox APi v2.
 
 ```pip3 install dropbox```
